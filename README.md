@@ -17,20 +17,24 @@ Whether you want to learn the manual process or quickly set it up with the inclu
 ### 1. Create the Linux user "dan" and map it to the "staff_u" SElinux user
 ```bash
 sudo useradd -Z staff_u dan
+```
+
+### 2. Setup the new password for the user dan
+```bash
 sudo passwd dan
 ```
 
-### 2. Verify the mapping
+### 3. Verify the mapping
 ```bash
 sudo semanage login -l | grep dan
 ```
 
-### 3. Relabel the new user's directory
+### 4. Relabel the new user's directory
 ```bash
 sudo restorecon -RF -v /home/dan
 ```
 
-### 4. Logout and log back in as the new user dan and verify the mapping
+### 5. Logout and log back in as the new user dan and verify the mapping
 ```bash
 id -Z
 ```
