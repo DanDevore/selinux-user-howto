@@ -14,7 +14,7 @@ Whether you want to learn the manual process or quickly set it up with the inclu
  
 ## 📖 Manual Steps
 
-### 1. Create the Linux user and map it to the "staff_u" SElinux user
+### 1. Create the Linux user "dan" and map it to the "staff_u" SElinux user
 ```bash
 sudo useradd -Z staff_u dan
 sudo passwd dan
