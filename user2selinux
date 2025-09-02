@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+sudo useradd -Z staff_u dan
+sudo passwd dan
+sudo restorecon -RF -v /home/dan
